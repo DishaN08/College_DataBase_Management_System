@@ -9,8 +9,8 @@ CREATE statements are used to create the tables required.
 Apply the INSERT statements.
 
 #STEP 3:
-# Get following Data Exploration results:
-1.There are gaps in the current course offerings and I need to fill those gaps by providing with a query which lists each department and the number of courses offered by that department.
+# Data Exploration results:
+1.There are gaps in the current course offerings and  using SQL queries, fill those gaps by providing with a query which lists each department and the number of courses offered by that department.
 
 2. To know which courses are most popular with the students.
 
