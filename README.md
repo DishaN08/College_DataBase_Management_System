@@ -22,4 +22,4 @@ Apply the INSERT statements.
 
 5.Query to list students’ First Name, Last Name, and Number of Courses they are taking in their major department.
 
-6. Query to know the name of students scoring less than 50% so they can be given more assistance.
+6.Query to know the name of students scoring less than 50% so they can be given more assistance.
