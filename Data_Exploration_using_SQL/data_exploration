@@ -1,0 +1,65 @@
+SELECT department.departmentname, course.coursename, course.deptid
+FROM department
+FULL JOIN course ON department.id=course.id;
+
+SELECT * FROM facultycourse
+WHERE courseid = 0;
+
+SELECT faculty.deptid, course.coursename, course.deptid
+FROM faculty
+INNER JOIN course ON course.id=faculty.deptid;
+
+
+SELECT course.courseName, student.majorid
+FROM student
+FULL JOIN course ON course.deptid=student.majorid;
+
+SELECT student.firstname, student.lastname, student.majorid
+FROM student
+ORDER BY student.majorid DESC, student.lastname DESC;
+
+SELECT studentcourse.studentid, studentcourse.startDate
+FROM studentcourse
+ORDER BY studentcourse.startDate ASC, studentcourse.studentid DESC;
+
+SELECT COUNT(DISTINCT studentid)
+FROM studentcourse
+WHERE EXTRACT(MONTH from startDate)= 8;
+
+SELECT COUNT(course.coursename)
+FROM student JOIN course ON student.majorid= course.id
+GROUP BY student.majorid;
+
+SELECT CAST(AVG(studentcourse.progress) AS DECIMAL (50))
+FROM student
+FULL JOIN studentcourse ON student.majorid=studentcourse.studentid
+GROUP BY studentcourse.progress;
+
+SELECT AVG(studentcourse.progress)
+FROM course 
+INNER JOIN studentcourse ON course.id=studentcourse.studentid
+GROUP BY studentcourse.progress;
+
+Select MAX(studentcourse.Progress) AS MAX_PROGRESS
+FROM studentcourse;
+
+
+SELECT AVG(studentCourse.progress) AS AvG_Progress
+FROM studentCourse;
+
+
+SELECT Count(studentcourse.studentid)
+FROM studentcourse
+having avg(studentcourse.progress)>60;
+
+SELECT count(student.firstname),
+       MIN(studentCourse.progress),
+       MAX(studentCourse.progress)
+FROM student, studentCourse
+group by studentcourse.studentid;
+
+
+
+
+
+
